@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Weather">
+
+
+    <!--    <VideoView-->
+    <!--        android:id="@+id/videoView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        tools:layout_editor_absoluteX="0dp"-->
+    <!--        tools:layout_editor_absoluteY="0dp"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+
+    <TextView
+        android:id="@+id/cityNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/discriptionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="Description"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tempView"
+        app:layout_constraintTop_toBottomOf="@+id/tempView" />
+
+    <TextView
+        android:id="@+id/feelsLikeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="Feels like : "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tempView"
+        app:layout_constraintTop_toBottomOf="@+id/discriptionView" />
+
+    <TextView
+        android:id="@+id/dateTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/cityNameView"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameView" />
+
+    <TextView
+        android:id="@+id/tempView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="0 °C"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/cityNameView"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#2196F3"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        app:circularflow_defaultRadius="10dp"
+        app:circularflow_radiusInDP="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/main_rect" />
+
+    <ImageView
+        android:id="@+id/humidityBGView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pressureBGView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/round_rect_shape" />
+
+    <ImageView
+        android:id="@+id/pressureBGView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        app:layout_constraintBottom_toBottomOf="@+id/humidityBGView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/round_rect_shape" />
+
+    <ImageView
+        android:id="@+id/windSpeedBGView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        app:layout_constraintBottom_toBottomOf="@+id/humidityBGView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/pressureBGView"
+        app:srcCompat="@drawable/round_rect_shape" />
+
+    <TextView
+        android:id="@+id/humidityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="Humidity"
+        app:layout_constraintStart_toStartOf="@+id/humidityBGView"
+        app:layout_constraintTop_toTopOf="@+id/humidityBGView" />
+
+    <TextView
+        android:id="@+id/pressureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="Pressure"
+        app:layout_constraintStart_toStartOf="@+id/pressureBGView"
+        app:layout_constraintTop_toTopOf="@+id/pressureBGView" />
+
+    <TextView
+        android:id="@+id/humidityView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/humidityBGView"
+        app:layout_constraintEnd_toEndOf="@+id/humidityBGView"
+        app:layout_constraintStart_toStartOf="@+id/humidityBGView"
+        app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
+
+    <TextView
+        android:id="@+id/pressureView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/pressureBGView"
+        app:layout_constraintEnd_toEndOf="@+id/pressureBGView"
+        app:layout_constraintStart_toStartOf="@+id/pressureBGView"
+        app:layout_constraintTop_toBottomOf="@+id/pressureTextView" />
+
+    <TextView
+        android:id="@+id/windSpeedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="Wind Speed"
+        app:layout_constraintStart_toStartOf="@+id/windSpeedBGView"
+        app:layout_constraintTop_toTopOf="@+id/windSpeedBGView" />
+
+    <TextView
+        android:id="@+id/windSpeedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jetbrains_mono_semibold"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/windSpeedBGView"
+        app:layout_constraintEnd_toEndOf="@+id/windSpeedBGView"
+        app:layout_constraintStart_toStartOf="@+id/windSpeedBGView"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedTextView" />
+
+    <ImageView
+        android:id="@+id/mainIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth="150dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
